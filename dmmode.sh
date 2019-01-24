@@ -22,8 +22,6 @@ DM_AUTO_VERSION_DETECTION="y"
 # DO NOT EDIT THE VARIABLES AFTER THIS LINE UNLESS YOU KNOW THE RISK!!
 # DO NOT EDIT THE VARIABLES AFTER THIS LINE UNLESS YOU KNOW THE RISK!!
 # DO NOT EDIT THE VARIABLES AFTER THIS LINE UNLESS YOU KNOW THE RISK!!
-echo $0 $1
-
 function _dmmode_bash() {
     local cur prev opts
     COMPREPLY=()
@@ -178,6 +176,8 @@ function _dmmode_print_help(){
 }
 
 function dmmode() {
+    echo "dmmode $0 $1"
+
     local num_cores num_j make_alias
 
     case "$1" in
