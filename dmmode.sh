@@ -176,8 +176,6 @@ function _dmmode_print_help(){
 }
 
 function dmmode() {
-    echo "dmmode $0 $1"
-
     local num_cores num_j make_alias
 
     case "$1" in
@@ -254,8 +252,7 @@ function dmmode() {
     echo "  alias colormake='colormake $make_alias'"
 }
 #This is for updating shell state in case user source their shell config
-echo "dmmode $0 $1"
-dmmode
+dmmode $1
 
 #
 # This is the end of dmmode code
