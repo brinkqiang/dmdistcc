@@ -181,8 +181,10 @@ function dmmode() {
     local num_cores num_j make_alias
 
     case "$1" in
-    "-h") _dmmode_print_help;;
-    "--help") _dmmode_print_help;;
+    "-h") _dmmode_print_help
+    ;;
+    "--help") _dmmode_print_help
+    ;;
     "reset")
         [[ -n "$(alias | grep 'colormake')" ]] && unalias colormake
         [[ -n "$(alias | grep 'make')" ]] && unalias make
@@ -252,6 +254,7 @@ function dmmode() {
     echo "  alias colormake='colormake $make_alias'"
 }
 #This is for updating shell state in case user source their shell config
+echo "dmmode $0 $1"
 dmmode
 
 #
